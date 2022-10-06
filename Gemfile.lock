@@ -54,6 +54,8 @@ GEM
     activerecord (7.0.4)
       activemodel (= 7.0.4)
       activesupport (= 7.0.4)
+    activerecord-import (1.4.0)
+      activerecord (>= 4.2)
     activestorage (7.0.4)
       actionpack (= 7.0.4)
       activejob (= 7.0.4)
@@ -73,6 +75,9 @@ GEM
     bootsnap (1.13.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    bullet (7.0.3)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     capybara (3.37.1)
       addressable
       matrix
@@ -157,6 +162,7 @@ GEM
       http (>= 4.0.0)
       rails (>= 5.2.0)
     orm_adapter (0.5.0)
+    pg (1.4.3-x64-mingw-ucrt)
     public_suffix (5.0.0)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -217,7 +223,6 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.5.2-x64-mingw-ucrt)
     stimulus-rails (1.1.0)
       railties (>= 6.0.0)
     thor (1.2.1)
@@ -233,6 +238,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2-x64-mingw-ucrt)
+    uniform_notifier (1.16.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -256,7 +262,9 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
+  activerecord-import (~> 1.4)
   bootsnap
+  bullet (~> 7.0)
   capybara
   debug
   devise
@@ -265,12 +273,12 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   noticed (~> 1.6)
+  pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
   ransack (~> 3.2)
   selenium-webdriver
   sprockets-rails
-  sqlite3 (~> 1.4)
   stimulus-rails
   turbo-rails
   tzinfo-data
